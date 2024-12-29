@@ -3,7 +3,7 @@
 const Gallery = () => {
   return (
     <div>
-      ggv
+      Gallery
     </div>
   )
 }
