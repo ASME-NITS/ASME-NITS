@@ -3,10 +3,12 @@ import asme from "../assets/asme.png";
 import { HashLink } from "react-router-hash-link";
 import './styles/Header.css'
 
-<img src={asme} alt="thurrnr" />
+
 const Header = () => {
   return (
-    <div className="header-container">
+    <nav>
+      <div className="header-container">
+      <img src={asme} alt="thurrnr" />
         <ul className="nav-list">
             <li>
                 <NavLink to='/' className="nav-link">
@@ -35,7 +37,8 @@ const Header = () => {
                 </NavLink>
             </li>
         </ul>
-    </div>
+      </div>
+    </nav>
   )
 }
 
