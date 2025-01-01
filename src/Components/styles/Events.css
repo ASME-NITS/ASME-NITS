@@ -83,6 +83,7 @@ footer img{
     flex-direction: column;
     margin-top: 15px;
     gap: 2rem;
+    color: grey;
     
 }
 .anchors-grid{
@@ -102,4 +103,22 @@ footer img{
 }
 .content input::placeholder{
     color: white;
+}
+.learn{
+    display: flex;
+    gap: 10px;
+    font-size: 1.5rem;
+}
+.box{
+    border: 2px solid darkblue;
+    position: relative;
+    width: 1.5rem;
+}
+.arrow{
+    position: absolute;
+    left: -5px;
+    font-size: 1em;
+}
+.s-anchors{
+    color: grey;
 }
