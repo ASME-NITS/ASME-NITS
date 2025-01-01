@@ -1,22 +1,23 @@
 *{
     text-decoration: none;
-    list-style: none;
-    font-family: Arial, Helvetica, sans-serif;
-    
+    list-style: none; 
 }
 body{
-    padding-top: 8rem;
+    padding-top: 10rem;
+    background-color: #000021;
+    padding-left: 2rem;
 }
 nav{
-  position: fixed;
-  top: 0.5rem;
+  position: absolute;
+  top: 1rem;
   left: 0;
   right: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .header-container img{
   position: absolute;
-  left: -50%;
-  height: 100%;
+  left: -45%;
+  
 }
 .header-container {
     background-color: rgba(0, 0, 0, 0.8); 
