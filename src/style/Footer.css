@@ -1,0 +1,124 @@
+/* Base Footer Styles */
+.footer {
+    background: linear-gradient(250deg, #180C18 24.71%, #110C22 88.47%);
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-logo {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .footer-logo img {
+    width: 200px;
+    height: auto;
+  }
+  
+  .footer-email {
+    flex: 1;
+    text-align: center;
+    
+  }
+  
+  .email-button {
+    display: inline-block;
+    width: 20em; /* Increased width */
+    text-align: center; /* Ensures text is centered inside the button */
+    background-color: #0073e6;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 1.9375rem;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .email-button:hover {
+    background-color: #005bb5;
+  }
+  
+  .footer-links {
+    flex: 2;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .footer-column h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+  
+  .footer-column a,
+  .footer-column Link {
+    display: block;
+    color: #ccc;
+    text-decoration: none;
+    margin: 5px 0;
+  }
+  
+  .footer-column a:hover,
+  .footer-column Link:hover {
+    color: #fff;
+  }
+  
+  /* Social Media Section */
+  .social-media-section {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .icon {
+    margin: 0 15px;
+    font-size: 20px;
+    color: #fff;
+  }
+  
+  .icon:hover {
+    color: #00acee;
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .footer-logo {
+      text-align: center;
+      margin-top: 20px;
+    }
+  
+    .footer-links {
+      flex-direction: column;
+      margin-top: 20px;
+    }
+  
+    .footer-column {
+      margin-bottom: 20px;
+    }
+  
+    .email-input {
+      width: 90%;
+    }
+  
+    .social-icons {
+      margin-top: 10px;
+    }
+  }
+  
