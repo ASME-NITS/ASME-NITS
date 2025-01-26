@@ -1,7 +1,7 @@
 .intro{
     display: flex;
     position: relative;
-    margin-bottom: 5 rem;
+    margin-bottom: 5rem;
     width: 100%;
 }
 .intro-image{
@@ -59,6 +59,16 @@
     padding: 1rem 2rem;
     background-color: transparent;
     border: 2px solid white;
+    transition: all 0.3s ease-in;
+    font-family: "Bebas Neue", serif;
+    font-size: 1.5rem;
+    
+}
+.btn-events:hover{
+    border: none;
+    background-color: black;
+    color: white;
+    transform: scale(1.2);
 }
 .paragraph2{
     display: flex;
@@ -89,8 +99,46 @@
     display: flex;
     align-items: center;
     gap: 2rem;
+    justify-content: space-between;
 }
 .paragraph1 .content{
     font-family: "Bebas Neue", serif;
     font-size: 1.5rem;
+}
+.learn{
+    font-family: "Bebas Neue", serif;
+}
+@media(max-width:1000px){
+    .intro-image{
+        width: 90vw;
+        right: 3rem;
+    }
+    .content{
+        width: 70vw;
+    }
+    .para p{
+        font-size: 1.2rem;
+        font-weight: lighter;
+    }
+    .para h2{
+        font-size: 3rem;
+    }
+    .img-btn img{
+        width: 15rem;
+    }
+    .r-image img{
+        display: none;
+    }
+    .paragraph1 img{
+        width: 15rem;
+    }
+    .paragraph2 img{
+        width: 15rem;
+    }
+    .paragraph3 img{
+        width: 15rem;
+    }
+    .paragraph3{
+        margin: 1px;
+    }
 }

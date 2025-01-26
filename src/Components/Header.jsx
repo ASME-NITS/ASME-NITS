@@ -2,14 +2,20 @@ import { NavLink } from "react-router-dom";
 import asme from "../assets/asme.png";
 import { HashLink } from "react-router-hash-link";
 import './styles/Header.css'
-
+import { FaHamburger } from "react-icons/fa";
+import { useState } from "react";
 
 const Header = () => {
+    const[isActive,setISActive] = useState(false);
+    const changeStyle = () =>{
+        setISActive(!isActive);
+    }
   return (
+    
     <nav>
+    <img src={asme} alt="thurrnr" />
       <div className="header-container">
-      <img src={asme} alt="thurrnr" />
-        <ul className="nav-list">
+        <ul className={`nav-list ${isActive ? 'active' : 'inactive'}`} >
             <li>
                 <NavLink to='/' className="nav-link">
                     Home
@@ -37,6 +43,7 @@ const Header = () => {
                 </NavLink>
             </li>
         </ul>
+        <button class="dropdown-btn" onClick={changeStyle}><FaHamburger /></button>
       </div>
     </nav>
   )
