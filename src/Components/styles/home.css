@@ -1,6 +1,8 @@
 .intro{
     display: flex;
     position: relative;
+    margin-bottom: 5 rem;
+    width: 100%;
 }
 .intro-image{
     position: absolute;
@@ -25,4 +27,70 @@
     position: absolute;
     left: -5px;
     font-size: 1em;
+}
+.robotics{
+    display: flex;
+    margin-top: 15rem;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.para{
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.para h2{
+    font-size: 3rem;
+    font-family: "Bebas Neue", serif;
+}
+.para p{
+    font-size: 1.5rem;
+    font-family: "Bebas Neue", serif;
+}
+.img-btn{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+}
+.btn-events{
+    padding: 1rem 2rem;
+    background-color: transparent;
+    border: 2px solid white;
+}
+.paragraph2{
+    display: flex;
+    gap: -1rem;
+    align-items: center;
+}
+.paragraph3{
+    display: flex;
+    gap: -3rem;
+    align-items: center;
+    margin-top: -17rem;
+}
+.last-parts{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+.paragraph2 .content{
+    font-family: "Bebas Neue", serif;
+    font-size: 1.5rem;
+}
+.paragraph3 .content{
+    font-family: "Bebas Neue", serif;
+    font-size: 1.5rem;
+}
+.paragraph1{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.paragraph1 .content{
+    font-family: "Bebas Neue", serif;
+    font-size: 1.5rem;
 }
