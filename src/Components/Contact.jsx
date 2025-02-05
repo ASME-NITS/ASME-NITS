@@ -1,7 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import "../styles/Contact.css";
-
+import rob1 from '../assets/contactRobot.png';
 
 function ContactForm() {
   const {
@@ -94,7 +94,7 @@ function ContactForm() {
         </form>
         <div className="contact-image">
           <img
-            src="ASME-NITS\src\assets\contactRobot.png"
+            src={rob1}
             alt="Robot Illustration"
             className="robot-img"
           />
