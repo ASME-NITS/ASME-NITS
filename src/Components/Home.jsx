@@ -9,6 +9,7 @@ import robot3 from '../assets/robot 3.png'
 import robot2 from '../assets/robot 2.png'
 import rec5 from '../assets/Rectangle 5.png'
 import robot from '../assets/robot.png';
+import Footer from './Footer.jsx';
 const Home = () => {
   return (
     <main>
@@ -96,50 +97,7 @@ const Home = () => {
           
         </div>
       </section>
-      <footer>
-              <img src={robot} alt="" />
-              <div className="content">
-                <input type="text" placeholder='your e-mail'/>
-                <div className="anchors-grid">
-                <div className="anchors">
-                  <NavLink>ASME NIT SILCHAR</NavLink>
-                  <div className="sub-anchors">
-                    <NavLink className="s-anchors">
-                      website
-                    </NavLink>
-                    <NavLink className="s-anchors">
-                      social media
-                    </NavLink>
-                    <NavLink className="s-anchors">
-                      NIT SILCHAR
-                    </NavLink>
-                  </div>
-                </div>
-                <div className="anchors">
-                  <NavLink>About</NavLink>
-                  <div className="sub-anchors">
-                    <NavLink className="s-anchors">
-                      Our projects
-                    </NavLink>
-                    <NavLink className="s-anchors">
-                      Event
-                    </NavLink>
-                  </div>
-                </div>
-                <div className="anchors">
-                  <NavLink>Support</NavLink>
-                  <div className="sub-anchors">
-                    <NavLink className="s-anchors">
-                      Support request
-                    </NavLink>
-                    <NavLink className="s-anchors">
-                      contact
-                    </NavLink>
-                  </div>
-                </div>
-                </div>
-              </div>
-            </footer>
+      <Footer/>
     </main>
   )
 }

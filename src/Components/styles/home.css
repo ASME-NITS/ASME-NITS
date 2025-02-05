@@ -1,3 +1,6 @@
+main{
+    width: 100%;
+}
 .intro{
     display: flex;
     position: relative;
@@ -109,13 +112,21 @@
     font-family: "Bebas Neue", serif;
 }
 @media(max-width:1000px){
+    .robotics{
+        gap: 1rem;
+        margin-left: 0;
+    }
     .intro-image{
-        width: 90vw;
-        right: 3rem;
+        display: none;
+    }
+    .intro-image img{
+        width: 700px;
+        object-fit: cover;
     }
     .content{
         width: 70vw;
     }
+
     .para p{
         font-size: 1.2rem;
         font-weight: lighter;

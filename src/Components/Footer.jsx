@@ -1,66 +1,53 @@
 import React from "react";
-import { Link } from "react-router-dom"; // Importing Link from React Router
-import "../style/Footer.css";
-import { FaTwitter, FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
-
+import './styles/Events.css';
+import robot from '../assets/ASME LOGO wHITE 2.png';
+import { NavLink } from 'react-router-dom';
 const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="footer-container">
-        {/* Email Section */}
-        <div className="footer-email">
-          <a
-            href="mailto:asme.nits@example.com?subject=Query%20from%20Website&body=Hello%20ASME%20Team,"
-            className="email-button"
-          >
-            Email Us
-          </a>
-        </div>
-
-        {/* Links Section */}
-        <div className="footer-links">
-          <div className="footer-column">
-            <h4>ASME NIT Silchar</h4>
-            <Link to="#">Website</Link>
-            <Link to="#">Social Media</Link>
-            <Link to="#">Nit Silchar</Link>
-          </div>
-          <div className="footer-column">
-            <h4>About</h4>
-            <Link to="#">Our Projects</Link>
-            <Link to="#">Event</Link>
-          </div>
-          <div className="footer-column">
-            <h4>Support</h4>
-            <Link to="#">Support Request</Link>
-            <Link to="#">Contact</Link>
-          </div>
-        </div>
-
-        {/* Logo Section */}
-        <div className="footer-logo">
-          <img src="/assets/ASmeLogo.png" alt="ASME Logo" className="logo" />
-        </div>
-      </div>
-
-      {/* Social Media Section */}
-      <div className="social-media-section">
-        <div className="social-icons">
-          <a href="#" target="_blank" rel="noreferrer">
-            <FaTwitter className="icon" />
-          </a>
-          <a href="#" target="_blank" rel="noreferrer">
-            <FaInstagram className="icon" />
-          </a>
-          <a href="#" target="_blank" rel="noreferrer">
-            <FaLinkedin className="icon" />
-          </a>
-          <a href="#" target="_blank" rel="noreferrer">
-            <FaFacebook className="icon" />
-          </a>
-        </div>
-      </div>
-    </footer>
+    <footer>
+            <img src={robot} alt="" />
+            <div className="content">
+              <input type="text" placeholder='your e-mail'/>
+              <div className="anchors-grid">
+              <div className="anchors">
+                <NavLink>ASME NIT SILCHAR</NavLink>
+                <div className="sub-anchors">
+                  <NavLink className="s-anchors">
+                    website
+                  </NavLink>
+                  <NavLink className="s-anchors">
+                    social media
+                  </NavLink>
+                  <NavLink className="s-anchors">
+                    NIT SILCHAR
+                  </NavLink>
+                </div>
+              </div>
+              <div className="anchors">
+                <NavLink>About</NavLink>
+                <div className="sub-anchors">
+                  <NavLink className="s-anchors">
+                    Our projects
+                  </NavLink>
+                  <NavLink className="s-anchors">
+                    Event
+                  </NavLink>
+                </div>
+              </div>
+              <div className="anchors">
+                <NavLink>Support</NavLink>
+                <div className="sub-anchors">
+                  <NavLink className="s-anchors">
+                    Support request
+                  </NavLink>
+                  <NavLink className="s-anchors">
+                    contact
+                  </NavLink>
+                </div>
+              </div>
+              </div>
+            </div>
+          </footer>
   );
 };
 

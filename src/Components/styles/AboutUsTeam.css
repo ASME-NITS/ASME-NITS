@@ -1,4 +1,10 @@
 /* About Us Section */
+.profile-grid{
+  display: grid;
+  column-gap: 6rem;
+  row-gap: 2rem;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+}
 .about-us {
     text-align: center;
     margin: 2rem auto;

@@ -1,8 +1,8 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import "../styles/Contact.css";
+import './styles/Contact.css';
 import rob1 from '../assets/contactRobot.png';
-
+import Footer from './Footer.jsx';
 function ContactForm() {
   const {
     register,
@@ -100,7 +100,9 @@ function ContactForm() {
           />
         </div>
       </div>
+      <Footer/>
     </div>
+    
   );
 }
 

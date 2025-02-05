@@ -1,23 +1,23 @@
 import React from "react";
-import "../style/Profile.css";
-import LadiesImage from "../assets/ladiesImage.png";
+import "./styles/Profile.css";
 import {FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
-const ProfileCard = () => {
+const ProfileCard = (props) => {
   return (
     <div className="profile-card">
       <div className="profile-content">
         <img
-          src={LadiesImage} // Replace with your image URL
+          src={props.image}// Replace with your image URL
           alt="Profile"
-          className="profile-image"
         />
+        <div className="prof-desc">
         <div className="profile-info">
-          <h3 className="profile-name">ALIZA</h3>
+          <h3 className="profile-name">{props.name}</h3>
           <p className="profile-description">
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-            vulputate libero et velit interdum."
+            {props.description}
           </p>
-          <div className="social-links">
+          
+        </div>
+        <div className="social-links">
             <a href="#" className="social-icon facebook">
               <FaFacebook className="icon"/>
             </a>

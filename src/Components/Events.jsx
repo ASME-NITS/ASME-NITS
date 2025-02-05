@@ -6,6 +6,7 @@ import ec from '../assets/EC.png';
 import robot from '../assets/robot.png';
 import { NavLink } from 'react-router-dom';
 import { FaArrowRight } from "react-icons/fa";
+import Footer from './Footer.jsx';
 const Events = () => {
   return (
     <main>
@@ -16,7 +17,7 @@ const Events = () => {
           From technical competitions to collaborative projects, each event offers a chance to apply theoretical knowledge to real-world challenges. Join us to innovate, collaborate, and excel. Explore our upcoming events and be part of the vibrant ASME community driving the future of engineering.</p>
       </section>
       <section className="events">
-        <div className="eventName">
+        <div className="eventName colrev">
           <div className="eventDesc">
             <h2>AEROSTRIKE</h2>
             <p>Want to take flight with your creative, favorite childhood pastime DIY plane modeling skills?
@@ -52,7 +53,7 @@ const Events = () => {
             </NavLink>
           </div>
         </div>
-        <div className="eventName">
+        <div className="eventName colrev">
           <div className="eventDesc">
           <h2>Escape The Room</h2>
           <p>
@@ -89,50 +90,7 @@ const Events = () => {
           
         </div>
       </section>
-      <footer>
-        <img src={robot} alt="" />
-        <div className="content">
-          <input type="text" placeholder='your e-mail'/>
-          <div className="anchors-grid">
-          <div className="anchors">
-            <NavLink>ASME NIT SILCHAR</NavLink>
-            <div className="sub-anchors">
-              <NavLink className="s-anchors">
-                website
-              </NavLink>
-              <NavLink className="s-anchors">
-                social media
-              </NavLink>
-              <NavLink className="s-anchors">
-                NIT SILCHAR
-              </NavLink>
-            </div>
-          </div>
-          <div className="anchors">
-            <NavLink>About</NavLink>
-            <div className="sub-anchors">
-              <NavLink className="s-anchors">
-                Our projects
-              </NavLink>
-              <NavLink className="s-anchors">
-                Event
-              </NavLink>
-            </div>
-          </div>
-          <div className="anchors">
-            <NavLink>Support</NavLink>
-            <div className="sub-anchors">
-              <NavLink className="s-anchors">
-                Support request
-              </NavLink>
-              <NavLink className="s-anchors">
-                contact
-              </NavLink>
-            </div>
-          </div>
-          </div>
-        </div>
-      </footer>
+      <Footer/>
     </main>
     
 
