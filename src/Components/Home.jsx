@@ -18,12 +18,17 @@ const Home = () => {
           <h1>SETTING THE STANDARDS</h1>
           <h2>AMERICAN SOCIETY OF MECHANICAL ENGINEERING</h2>
           <p>PROMOTES THE ART,SCIENCE AND PRACTICE OF MULTIDISCIPLINARY ENGINEERING AND ALLIED SCIENCES AROUND THE GLOBE</p>
-          <NavLink to="/events" className="learn">
+          <a
+              href="https://www.asme.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="learn"
+            >
             Learn More
             <div className="box">
               <FaArrowRight className="arrow" />
             </div>
-        </NavLink>
+        </a>
       </div>
         <div className="intro-image">
           <img src={robot1} alt="" />
@@ -31,14 +36,21 @@ const Home = () => {
       </section>
       <section className="robotics">
         <div className="para">
-            <h2>Robotics & AI Workshops</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae temporibus iste, dolor amet veritatis et distinctio dignissimos necessitatibus odit, vel earum sapiente quo animi fugit quis. Mollitia exercitationem doloribus nemo?</p>
-            <NavLink to="/events" className="learn">
-                Learn More
-                <div className="box">
-                  <FaArrowRight className="arrow" />
-                </div>
-            </NavLink>
+            <h2>THE ROBOTICS COLLECTION</h2>
+            <p>THE ADOPTION OF ROBOTICS IN INDUSTRIAL ENVIRONMENTS IS GROWING AT AN UNPRECEDENTED RATE. EXPLORE THIS COLLECTION TO DISCOVER MORE ABOUT AUTOMATION, COLLABORATIVE ROBOTS (COBOTS), AI-POWERED SYSTEMS, CUSTOM-BUILT ROBOTS, AND DRONE TECHNOLOGIES.
+            </p>
+           <a
+  href="https://www.asme.org/topics-resources/content/robotics"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="learn"
+>
+  Learn More
+  <div className="box">
+    <FaArrowRight className="arrow" />
+  </div>
+</a>
+
         </div>
         <div className="img-btn">
             <img src={greyRobo} alt="" />
@@ -61,7 +73,7 @@ const Home = () => {
           <div className="content">
             <h2>SECTIONS AND DIVISIONS</h2>
             <p>MEMBERS CAN ENGAGE WITH VARIOUS ASME OFFICIAL GROUPS (SECTIONS & TECHNICAL DIVISION). OFFICIAL GROUPS ARE LED BY ASME VOLUNTEERS </p>
-            <NavLink to="/events" className="learn">
+            <NavLink to="/learn-more" className="learn">
                 Learn More
                 <div className="box">
                   <FaArrowRight className="arrow" />
@@ -73,12 +85,18 @@ const Home = () => {
           <div className="content">
               <h2>BECOMING AN ASME MEMBER</h2>
               <p>JOINING ASME IS THE MOST IMPORTANT CONNECTION A CURRENT OR FUTURE MECHANICAL ENGINEER CAN MAKE</p>
-              <NavLink to="/events" className="learn">
+              <a
+               href="https://www.asme.org/membership"
+               target="_blank"
+               rel="noopener noreferrer"
+               className="learn"
+>
+
                 Learn More
                 <div className="box">
                   <FaArrowRight className="arrow" />
                 </div>
-            </NavLink>
+            </a>
             </div>
             <img src={robot3} alt="" />
         </div>
@@ -87,12 +105,18 @@ const Home = () => {
           <div className="content">
             <h2>ASME E FEST</h2>
             <p>GO BEYOND THE CLASSROOM OR LABORATORY AND PUT ENGINEERING DESIGN PRINCIPLES TO THE TEST BY APPLYING THEM IN ASME STUDENT COMPETITIONS (ENTER AS AN INDIVIDUAL OR A TEAM)</p>
-            <NavLink to="/events" className="learn">
+            <a
+               href="https://efests.asme.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="learn"
+                >
+
                 Learn More
                 <div className="box">
                   <FaArrowRight className="arrow" />
                 </div>
-            </NavLink>
+            </a>
           </div>
           
         </div>

@@ -3,6 +3,7 @@ import asme from "../assets/asme.png";
 import { HashLink } from "react-router-hash-link";
 import './styles/Header.css'
 import { FaHamburger } from "react-icons/fa";
+
 import { useState } from "react";
 
 const Header = () => {
@@ -32,13 +33,14 @@ const Header = () => {
                     About
                 </NavLink>
             </li>
-            <li>
+             <li>
                 <NavLink to='/contact' className="nav-link">
                     Contact
                 </NavLink>
             </li>
         </ul>
-        <button class="dropdown-btn" onClick={changeStyle}><FaHamburger /></button>
+
+        <button className="dropdown-btn" onClick={changeStyle}><FaHamburger /></button>
       </div>
     </nav>
   )

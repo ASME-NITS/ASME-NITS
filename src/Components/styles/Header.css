@@ -10,37 +10,38 @@ body{
 nav{
   position: absolute;
   top: 2rem;
-  left: 30px;
+  left: 0;
   right: 0;
+  align-items: center;
+  padding: 0 2rem;
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
   gap: .5rem;
 }
 .header-container {
-    background-color: rgba(0, 0, 0, 0.8); 
-    backdrop-filter: blur(10px); 
-    position: relative; 
-    left: 50%; 
-    top: 0.5rem; 
-    transform: translateX(-70%); 
-    padding: .5rem 3rem; 
-    display: flex; 
-    justify-content: space-evenly; 
-    align-items: center; 
-    white-space: nowrap; 
-    width: 40vw; 
-    z-index: 100; 
-    border-radius: 9999px; 
-  }
-  
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  position: relative;
+  left: 50%;
+  top: 0.5rem;
+  transform: translateX(-70%);
+  padding: .5rem 2.5rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  white-space: nowrap;
+  width: 40vw;
+  z-index: 100;
+  border-radius: 9999px;
+}
+
   .nav-list {
-    display: flex; /* flex */
-    font-weight: 300; /* font-light */
-    font-size: 0.9rem; /* text-[0.9rem] */
-    width: 100%; /* w-full */
-    justify-content: space-between; /* justify-evenly */
-  }
-  
+  display: flex;
+  align-items: center;
+  font-weight: 300;
+  font-size: 0.9rem;
+  gap: 6rem;   /* controlled spacing */
+}
   .nav-link {
     position: relative; /* relative */
     color: white; /* text-white */
@@ -92,6 +93,8 @@ nav{
     width: 100px;
     padding: 1rem;
     border-radius: 1.5rem;
+  
+
   }
   .active{
     display: flex;
@@ -104,4 +107,4 @@ nav{
     padding: 1rem;
   }
 }
-  
+ 

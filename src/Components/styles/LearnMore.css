@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.learnmore-page {
+  min-height: calc(100vh - 64px); 
+  padding: 4rem 5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  color: white;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.learn-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+}
+
+.learn-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.learn-text {
+  width: 52%;
+}
+
+.learn-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.learn-text p {
+  font-size: 1.25rem;
+  line-height: 2.1rem;
+  color: #e0e0e0;
+
+  text-align: justify;
+  text-align-last: left;
+}
+
+.learn-link {
+  display: inline-block;
+  margin-top: 1.15rem;
+  font-size: 1.3rem;
+  color: white;
+  text-decoration: none;
+  border-bottom: 2px solid white;
+  padding-bottom: 4px;
+}
+
+.learn-image {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+}
+
+.learn-image img {
+  width: 100%;
+  max-width: 380px;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+@media (max-width: 1366px) {
+  .learnmore-page {
+    padding: 3.5rem 4rem 2.5rem;
+    gap: 3.5rem;
+  }
+
+  .learn-text h1 {
+    font-size: 3.1rem;
+  }
+
+  .learn-text p {
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
+
+  .learn-image img {
+    max-width: 350px;
+    height: 220px;
+  }
+}
+
+@media (max-width: 900px) {
+  .learnmore-page {
+    padding: 3rem 2rem;
+  }
+
+  .learn-section,
+  .learn-section.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .learn-text,
+  .learn-image {
+    width: 100%;
+  }
+
+  .learn-text h1 {
+    font-size: 2.6rem;
+  }
+
+  .learn-text p {
+    font-size: 1.15rem;
+    text-align: left;
+  }
+
+  .learn-image img {
+    max-width: 90%;
+    height: 220px;
+  }
+}
