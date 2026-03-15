@@ -1,121 +1,107 @@
+/* GLOBAL RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.learnmore-page {
-  min-height: calc(100vh - 64px); 
-  padding: 4rem 5rem 3rem;
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-
+html, body {
+  overflow-x: hidden;
+  font-family: 'Bebas Neue', sans-serif;
+  background-color: #0b0b0b;
   color: white;
-  font-family: "Bebas Neue", sans-serif;
 }
 
-.learn-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 4rem;
+/* ABOUT US */
+.about-us {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #1a1a1a;
+  border-radius: 12px;
+  text-align: center;
 }
 
-.learn-section.reverse {
-  flex-direction: row-reverse;
-}
-
-.learn-text {
-  width: 52%;
-}
-
-.learn-text h1 {
-  font-size: 2.5rem;
+.about-us h2 {
+  font-size: 2.8rem;
   margin-bottom: 1rem;
 }
 
-.learn-text p {
-  font-size: 1.25rem;
-  line-height: 2.1rem;
-  color: #e0e0e0;
-
-  text-align: justify;
-  text-align-last: left;
+.about-us p {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  color: #d0d0d0;
 }
 
-.learn-link {
-  display: inline-block;
-  margin-top: 1.15rem;
-  font-size: 1.3rem;
-  color: white;
-  text-decoration: none;
-  border-bottom: 2px solid white;
-  padding-bottom: 4px;
+/* CAROUSEL */
+.carousel-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 3rem auto;
+  position: relative;
 }
 
-.learn-image {
-  width: 40%;
+.team-swiper {
+  overflow: visible; /* allow scaling without clipping */
+}
+
+.swiper-wrapper {
+  padding-left: 50px; /* extra space for first/last slides */
+  padding-right: 50px;
+}
+
+.swiper-slide {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
 }
 
-.learn-image img {
+/* TEAM CARD */
+.team-card {
+  width: 220px;
+  background: #2a2a2a;
+  border-radius: 12px;
+  padding: 1rem;
+  box-sizing: border-box;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.team-card img {
   width: 100%;
-  max-width: 380px;
-  height: 230px;
+  height: 160px;
   object-fit: cover;
-  border-radius: 6px;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
 }
 
-@media (max-width: 1366px) {
-  .learnmore-page {
-    padding: 3.5rem 4rem 2.5rem;
-    gap: 3.5rem;
-  }
-
-  .learn-text h1 {
-    font-size: 3.1rem;
-  }
-
-  .learn-text p {
-    font-size: 1.25rem;
-    line-height: 2rem;
-  }
-
-  .learn-image img {
-    max-width: 350px;
-    height: 220px;
-  }
+.team-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
 }
 
-@media (max-width: 900px) {
-  .learnmore-page {
-    padding: 3rem 2rem;
-  }
+.team-card p {
+  font-size: 0.85rem;
+  color: #ccc;
+}
 
-  .learn-section,
-  .learn-section.reverse {
-    flex-direction: column;
-    text-align: center;
-  }
+/* NAVIGATION BUTTONS */
+.swiper-button-prev,
+.swiper-button-next {
+  color: white;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  z-index: 10;
+  cursor: pointer;
+}
 
-  .learn-text,
-  .learn-image {
-    width: 100%;
-  }
+.swiper-button-prev { left: 10px; }
+.swiper-button-next { right: 10px; }
 
-  .learn-text h1 {
-    font-size: 2.6rem;
-  }
-
-  .learn-text p {
-    font-size: 1.15rem;
-    text-align: left;
-  }
-
-  .learn-image img {
-    max-width: 90%;
-    height: 220px;
-  }
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .team-card { width: 180px; }
+  .about-us h2 { font-size: 2.4rem; }
+  .about-us p { font-size: 1rem; }
 }

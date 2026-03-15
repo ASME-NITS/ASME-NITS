@@ -1,137 +1,117 @@
-/* About Us Section */
-.profile-grid{
-  display: grid;
-  column-gap: 6rem;
-  row-gap: 2rem;
-  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+/* ABOUT SECTION */
+
+.about-us{
+  width:85%;
+  margin:40px auto;
+  padding:30px;
+  text-align:center;
+  color:white;
+  background:rgba(255,255,255,0.08);
+  border-radius:12px;
 }
-.about-us {
-    text-align: center;
-    margin: 2rem auto;
-    padding: 2rem;
-    border-radius: 10px;
-    color: #fff;
-    width: 80%;
-    background: rgba(217, 217, 217, 0.10);
-    box-shadow: 0px 4.209px 0px 0px rgba(255, 244, 244, 0.25) inset, 42.304px -42.304px 42.304px 0px rgba(165, 165, 165, 0.10) inset, -42.304px 42.304px 42.304px 0px rgba(255, 255, 255, 0.10) inset;
-    backdrop-filter: blur(42.304141998291016px);
+
+.about-us h2{
+  font-size:40px;
+  margin-bottom:15px;
+}
+
+.about-us p{
+  font-size:18px;
+  line-height:30px;
+  max-width:900px;
+  margin:auto;
+}
+
+
+/* TEAM SECTION */
+
+.team-section{
+  width:90%;
+  margin:50px auto;
+  text-align:center;
+}
+
+.team-title{
+  font-size:36px;
+  margin-bottom:40px;
+  color:white;
+}
+
+
+/* GRID */
+
+.profile-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:40px;
+  justify-items:center;
+}
+
+
+/* CARD */
+
+.team-card{
+  background:rgba(255,255,255,0.1);
+  border-radius:15px;
+  padding:25px;
+  text-align:center;
+  color:white;
+  transition:transform 0.3s ease;
+  width:100%;
+  max-width:260px;
+}
+
+.team-card:hover{
+  transform:translateY(-8px);
+}
+
+
+/* IMAGE */
+
+.team-card img{
+  width:150px;
+  height:150px;
+  object-fit:cover;
+  border-radius:50%;
+  margin:0 auto 15px auto;
+  display:block;
+}
+
+
+/* TEXT */
+
+.team-card h3{
+  font-size:20px;
+  margin:10px 0;
+}
+
+.team-card p{
+  font-size:15px;
+  color:#dcdcdc;
+}
+
+
+/* TABLET */
+
+@media (max-width:1000px){
+
+  .profile-grid{
+    grid-template-columns:repeat(2,1fr);
   }
-  
-  .about-us h2 {
-    color: #FFF;
-  
-    font-family: Fussion;
-    font-size: 4rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 4.5rem; /* 112.5% */
+
+}
+
+
+/* MOBILE */
+
+@media (max-width:600px){
+
+  .profile-grid{
+    grid-template-columns:1fr;
   }
-  
-  .about-us p {
-    color: #FFF;
-    text-align: center;
-    font-family: Fussion;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.875rem; /* 250% */
-    text-transform: uppercase;
+
+  .team-card{
+    max-width:300px;
   }
-  
-  /* Carousel Section */
-  .carousel-section {
-    margin: 3rem auto;
-    text-align: center;
-    position: relative; /* Necessary for positioning arrows */
-    width: 90%;
-    max-width: 1200px; /* Prevent the slider from growing too large on wider screens */
-  }
-  
-  .carousel-section img {
-    width: 100%;
-    border-radius: 10px;
-  }
-  
-  /* Arrow Buttons (Stick to the screen edges) */
-  .swiper-button-prev,
-  .swiper-button-next {
-    position: fixed; /* Stick to the screen edges */
-    top: 50%; /* Center vertically */
-    transform: translateY(-50%); /* Adjust to exact middle */
-    z-index: 10;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    border-radius: 50%;
-    color: #fff;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  
-  .swiper-button-prev:hover,
-  .swiper-button-next:hover {
-    background: rgba(255, 255, 255, 0.7);
-  }
-  
-  .swiper-button-prev {
-    left: 15px; /* Stick to the left edge */
-  }
-  
-  .swiper-button-next {
-    right: 15px; /* Stick to the right edge */
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 1024px) { /* For devices smaller than laptops */
-    .carousel-section {
-      width: 95%; /* Adjust slider width for smaller screens */
-    }
-  
-    .swiper-button-prev,
-    .swiper-button-next {
-      top: 55%; /* Slight adjustment for vertical position */
-      left: 10px;
-      right: 10px;
-    }
-  }
-  
-  @media (max-width: 768px) { /* For tablets */
-    .about-us {
-      width: 90%;
-      padding: 1.5rem;
-    }
-  
-    .about-us h2 {
-      font-size: 2rem;
-    }
-  
-    .about-us p {
-      font-size: 1rem;
-    }
-  
-    .carousel-section img {
-      width: 100%;
-      margin: 0 auto;
-    }
-  
-    .swiper-button-prev,
-    .swiper-button-next {
-      top: 55%; /* Slightly adjust for smaller screens */
-      left: 5px;
-      right: 5px;
-    }
-  }
-  
-  @media (max-width: 480px) { /* For mobile devices */
-    .about-us h2 {
-      font-size: 1.8rem;
-    }
-  
-    .about-us p {
-      font-size: 0.9rem;
-    }
-  
-    .swiper-button-prev,
-    .swiper-button-next {
-      top: 60%; /* Adjust vertical position for smaller screens */
-    }
-  }
+
+}

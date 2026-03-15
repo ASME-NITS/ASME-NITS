@@ -1,96 +1,50 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Navigation, Autoplay } from "swiper/modules";
-import { ArrowLeft, ArrowRight } from "phosphor-react";
-import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/navigation";
-import "../style/AboutUsTeam.css"; // Custom CSS file for styling
+import "./styles/AboutUsTeam.css";
 
-// Importing Images
-import Photo1 from "../assets/ladiesImage.png";
-import BlurredImage from "../assets/BlurredImage.png";
-import RobotImage from "../assets/Robot.png";
+import Hrishikesh from "../assets/Hrishikesh Das.jpeg";
+import Joyjeet from "../assets/Joyjeet Kalita.jpeg";
+import Chiranjit from "../assets/Chiranjit Ray.jpeg";
+import Nilanjana from "../assets/Nilanjana Dutta.jpeg";
+import Vikash from "../assets/Vikash Sharma.jpeg";
+import Pratyush from "../assets/Pratyush Kumar.jpeg";
+import Deepshikha from "../assets/Deepshikha Malakar.jpeg";
+import Abhishekh from "../assets/Abhishekh Kumar Gupta.jpeg";
 
-// About Us Component
-const AboutUs = () => {
-  return (
-    <section className="about-us">
-      <h2>ABOUT US</h2>
-      <p>
-        ASME NIT Silchar is a vibrant student chapter of the American Society of
-        Mechanical Engineers, dedicated to fostering a community of innovative
-        and passionate engineers. Our mission is to provide students with
-        opportunities for professional development, technical skill
-        enhancement, and networking through a variety of events, workshops, and
-        competitions. Join us and be part of a dynamic organization that drives
-        excellence and innovation at NIT Silchar.
-      </p>
-    </section>
-  );
-};
+const teamMembers = [
+  { name: "Hrishikesh Das", role: "Student Chair", image: Hrishikesh },
+  { name: "Joyjeet Kalita", role: "Vice Chair", image: Joyjeet },
+  { name: "Chiranjit Ray", role: "Secretary", image: Chiranjit },
+  { name: "Nilanjana Dutta", role: "Design Head", image: Nilanjana },
+  { name: "Vikash Sharma", role: "PR Head", image: Vikash },
+  { name: "Pratyush Kumar", role: "Content Head", image: Pratyush },
+  { name: "Deepshikha Malakar", role: "Treasurer", image: Deepshikha },
+  { name: "Abhishekh Kumar Gupta", role: "Marketing Head", image: Abhishekh }
+];
 
-// Carousel (Photo Section)
-const CarouselSection = () => {
-  return (
-    <section className="carousel-section">
-      <Swiper
-        effect="coverflow"
-        grabCursor={true}
-        centeredSlides={true}
-        loop={true}
-        slidesPerView={3}
-        coverflowEffect={{
-          rotate: 0,
-          stretch: -75,
-          depth: 250,
-          modifier: 3.5,
-          slideShadows: false,
-        }}
-        autoplay={{
-          delay: 1000, // Automatic slide change every 3 seconds
-          disableOnInteraction: false, // Keep autoplay active after manual interaction
-        }}
-        navigation={{
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-          clickable: true,
-        }}
-        modules={[EffectCoverflow, Navigation, Autoplay]}
-      >
-        <SwiperSlide>
-          <img src={Photo1} alt="Photo 1" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={BlurredImage} alt="Photo 2" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={RobotImage} alt="Photo 3" />
-        </SwiperSlide>
-        {/* Add more slides as needed */}
-      </Swiper>
-
-      <div className="slider-controler">
-        <div className="swiper-button-prev">
-          <ArrowLeft size={20} />
-        </div>
-        <div className="swiper-button-next">
-          <ArrowRight size={20} />
-        </div>
-      </div>
-    </section>
-  );
-};
-
-// Main Component
 const AboutUsTeam = () => {
   return (
-    <div>
-      <AboutUs />
-      <CarouselSection />
+    <div className="team-section">
+
+      <h2 className="team-title">MEET OUR TEAM</h2>
+
+      <div className="profile-grid">
+
+        {teamMembers.map((member, index) => (
+          <div className="team-card" key={index}>
+
+            <img src={member.image} alt={member.name} />
+
+            <h3>{member.name}</h3>
+
+            <p>{member.role}</p>
+
+          </div>
+        ))}
+
+      </div>
+
     </div>
   );
 };
 
 export default AboutUsTeam;
-
