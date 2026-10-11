@@ -1,100 +1,145 @@
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import { 
+  FaArrowRight, 
+  FaCalendarAlt, 
+  FaUsers, 
+  FaAward, 
+  FaTools,
+  FaCheckCircle 
+} from "react-icons/fa";
 import './styles/Events.css';
+
 import aerostrike from '../assets/aerostrike.png';
 import etr from '../assets/ETR.png';
 import bi from '../assets/BI.png';
 import ec from '../assets/EC.png';
-import robot from '../assets/robot.png';
-import { NavLink } from 'react-router-dom';
-import { FaArrowRight } from "react-icons/fa";
-import Footer from './Footer.jsx';
+
+const eventsData = [
+  {
+    id: "aerostrike",
+    title: "AEROSTRIKE",
+    badge: "MechActivity 10.0",
+    category: "Aerodynamics & Flight Modeling",
+    image: aerostrike,
+    description: "Want to take flight with creative aircraft design? ASME NIT Silchar brings you AeroStrike in collaboration with MES under MechActivity 10.0. A high-octane competition to test your knowledge of glide ratios, weight distribution, and aerodynamics.",
+    highlights: ["DIY Glider Prototyping", "Flight Stability & Distance Tests", "Aerodynamic Design Review"],
+    teamSize: "2 - 3 Members"
+  },
+  {
+    id: "bridge-it",
+    title: "BRIDGE IT",
+    badge: "Tecnoesis Flagship",
+    category: "Civil & Structural Engineering",
+    image: bi,
+    description: "Ever wondered how engineers craft record-breaking bridges like the Golden Gate and Millau Viaduct? Tecnoesis proudly presents Bridge It — a fusion of structural simulation and physical construction using truss engineering to build the ultimate bridge to victory.",
+    highlights: ["Truss Structure Optimization", "Maximum Load Bearing Test", "Design Aesthetics & Precision"],
+    teamSize: "2 - 4 Members"
+  },
+  {
+    id: "escape-room",
+    title: "ESCAPE THE ROOM",
+    badge: "Tecnoesis Challenge",
+    category: "Logic & Engineering Puzzles",
+    image: etr,
+    description: "Embark on an adrenaline-fueled journey through mind-bending puzzles and ingenious mechanical riddles. ASME brings you Escape the Room at Tecnoesis, where intellect and team problem-solving take the driver's seat through high-stakes engineering twists.",
+    highlights: ["Cipher & Mechanism Decoding", "Multi-Stage Circuit Puzzles", "Timed Team Escape Run"],
+    teamSize: "3 - 5 Members"
+  },
+  {
+    id: "effecto-cascada",
+    title: "EFFECTO CASCADA",
+    badge: "Kinetic Domino Challenge",
+    category: "Marble Maze & Chain Reaction",
+    image: ec,
+    description: "A thrilling test of mechanical teamwork and chain-reaction ingenuity. Integrate complex marble mazes with intricate domino cascades and kinetic triggers. Teams compete on sequence duration, creative mechanics, and flawless execution.",
+    highlights: ["Multi-Level Marble Tracks", "Kinetic Energy Transfer Triggers", "Grand Finale Exhibition"],
+    teamSize: "4 - 5 Members"
+  }
+];
+
 const Events = () => {
+  const [activeFilter, setActiveFilter] = useState("all");
+
   return (
-    <main>
-      <section className="intro">
-          <h1>ASME EVENTS:</h1>
-          <h2>Innovation and Engineering Excellence</h2>
-          <p>Welcome to the ASME Events Section, where we bring together aspiring and professional engineers through dynamic and engaging events. Designed to challenge and inspire, our events foster a community passionate about mechanical engineering and technological advancement.
-          From technical competitions to collaborative projects, each event offers a chance to apply theoretical knowledge to real-world challenges. Join us to innovate, collaborate, and excel. Explore our upcoming events and be part of the vibrant ASME community driving the future of engineering.</p>
+    <div className="events-wrapper">
+      
+      {/* Page Header */}
+      <section className="events-intro">
+        <div className="cyber-badge">
+          <span className="cyber-badge-dot"></span>
+          INNOVATION & COMPETITIONS
+        </div>
+        <h1 className="events-main-title">
+          FLAGSHIP <span className="gradient-text">ASME EVENTS</span>
+        </h1>
+        <p className="events-subtitle">
+          Where theoretical concepts transform into functional prototypes. Explore annual student competitions, engineering hackathons, and design challenges hosted by ASME NIT Silchar.
+        </p>
       </section>
-      <section className="events">
-        <div className="eventName colrev">
-          <div className="eventDesc">
-            <h2>AEROSTRIKE</h2>
-            <p>Want to take flight with your creative, favorite childhood pastime DIY plane modeling skills?
-              Well look no further. ASME - NJIT Silchar Student Section brings to you “AeroStrike”, in collaboration with the MES under MechActivity 10.0.
-              A competition to let your creativity soar and put your aeronautical skills to the test. "AeroStrike" is a simple competition designed to test your knowledge of weight distribution and aerodynamics
-            </p>
-            <NavLink to="/events" className="learn">
-              Learn More
-              <div className="box">
-                <FaArrowRight className="arrow" />
+
+      {/* Events List */}
+      <section className="events-grid">
+        {eventsData.map((event, idx) => (
+          <div 
+            key={event.id} 
+            className={`cyber-card event-card ${idx % 2 === 1 ? 'reverse-card' : ''}`}
+          >
+            <div className="event-media">
+              <img src={event.image} alt={event.title} className="event-img" />
+              <div className="event-badge-overlay">{event.badge}</div>
+            </div>
+
+            <div className="event-info">
+              <span className="event-category-tag">{event.category}</span>
+              <h2 className="event-title">{event.title}</h2>
+              <p className="event-desc">{event.description}</p>
+
+              <div className="event-meta-specs">
+                <div className="spec-item">
+                  <FaUsers className="spec-icon" />
+                  <span>Team: {event.teamSize}</span>
+                </div>
+                <div className="spec-item">
+                  <FaTrophy className="spec-icon" />
+                  <span>Certificates & Prizes</span>
+                </div>
               </div>
-            </NavLink>
-          </div>
-          <div className="eventImg">
-            <img src={aerostrike} alt="dd" />
-          </div>
-        </div>
-        <div className="eventName">
-        <div className="eventImg">
-            <img src={bi} alt="dd" />
-          </div>
-          <div className="eventDesc">
-          <h2>Bridge It</h2>
-          <p>
-          Ever wondered how engineers design bridges? It involves overcoming challenges to create stunning structures like the Golden Gate and Millau Viaduct.
-          Tecnoesis proudly presents "Bridge It" - a fusion of creativity and construction. Using materials like toothpicks, cardboard, and popsicle sticks, and secured with hot glue, participants will construct their masterpieces. Unleash your engineering skills and imagination to build the bridge to victory! 
-          </p>
-          <NavLink to='/events' className="learn">
-              Learn More
-              <div className="box">
-                <FaArrowRight className="arrow" />
+
+              <div className="event-highlights">
+                {event.highlights.map((h, i) => (
+                  <span key={i} className="highlight-pill">
+                    <FaCheckCircle className="check-icon" /> {h}
+                  </span>
+                ))}
               </div>
-            </NavLink>
-          </div>
-        </div>
-        <div className="eventName colrev">
-          <div className="eventDesc">
-          <h2>Escape The Room</h2>
-          <p>
-          Embark on a journey through mind-bending puzzles, captivating and engaging to the fascinating world of ingenious engineering riddles. There's a magical essence to intellectual challenges, whether your heart beats for puzzles or the marvels of engineering.
-          ASME brings you "Escape the Room" at Tecnoesis, where your intellect takes the driver's seat! Join us to be part of a memorable event that promises suspense, innovation, and the joy of conquering every twist thrown your way.
-          </p>
-          <NavLink to="/events" className="learn">
-              Learn More
-              <div className="box">
-                <FaArrowRight className="arrow" />
+
+              <div className="event-card-actions">
+                <NavLink to="/contact" className="cyber-btn-primary">
+                  Participate / Inquire <FaArrowRight />
+                </NavLink>
               </div>
-          </NavLink>
+            </div>
           </div>
-          <div className="eventImg">
-            <img src={etr} alt="dd" />
-          </div>
-        </div>
-        <div className="eventName">
-        <div className="eventImg">
-            <img src={ec} alt="dd" />
-          </div>
-          <div className="eventDesc">
-          <h2>Effecto Cascada</h2>
-          <p>
-          Get ready for the Marble Maze Challenge, a thrilling test of teamwork and engineering creativity! Form a team of 4-5 members and integrate complex marble maze while building intricate domino structures. Complete for points based on speed, creativity, and execution. Top teams will advance to a grand finale, creating an impressive marble maze design showcasing their ingenuity and teamwork to become the Marble Maze Champions, with prizes awarded for outstanding performance and innovation.
-          </p>
-          <NavLink to="/events" className="learn">
-              Learn More
-              <div className="box">
-                <FaArrowRight className="arrow" />
-              </div>
-            </NavLink>
-          </div>
-          
-        </div>
+        ))}
       </section>
-      <Footer/>
-    </main>
-    
 
-  )
-}
+      {/* Bottom CTA Banner */}
+      <section className="cyber-card events-cta-banner">
+        <div className="cta-banner-content">
+          <div className="cyber-badge">HOST AN EVENT</div>
+          <h3>Have an idea for a mechanical engineering challenge?</h3>
+          <p>
+            Partner with ASME NIT Silchar to sponsor a competition, organize an expert workshop, or launch an industrial hackathon.
+          </p>
+        </div>
+        <NavLink to="/contact" className="cyber-btn-secondary">
+          Contact Event Team <FaArrowRight />
+        </NavLink>
+      </section>
 
-export default Events
+    </div>
+  );
+};
+
+export default Events;

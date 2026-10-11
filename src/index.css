@@ -1,0 +1,256 @@
+/* ==========================================================
+   ASME NIT SILCHAR - GLOBAL DESIGN SYSTEM & THEME
+   Futuristic Engineering • Cyber-Robotics • Dark Glassmorphism
+   ========================================================== */
+
+:root {
+  /* Color Palette */
+  --bg-darkest: #050811;
+  --bg-dark: #070c18;
+  --bg-card: rgba(13, 22, 41, 0.72);
+  --bg-card-hover: rgba(18, 31, 58, 0.85);
+  --bg-glass: rgba(255, 255, 255, 0.04);
+
+  /* Neon & Brand Accents */
+  --cyan-primary: #00f0ff;
+  --cyan-glow: rgba(0, 240, 255, 0.4);
+  --blue-electric: #2563eb;
+  --blue-glow: rgba(37, 99, 235, 0.4);
+  --amber-mechanic: #ff6b00;
+  --amber-glow: rgba(255, 107, 0, 0.35);
+
+  /* Text & Surface Tokens */
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --border-subtle: rgba(56, 189, 248, 0.12);
+  --border-glow: rgba(0, 240, 255, 0.35);
+
+  /* Typography */
+  --font-tech: 'Orbitron', monospace;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Outfit', 'Inter', -apple-system, sans-serif;
+  --font-classic: 'Bebas Neue', sans-serif;
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Base Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-darkest);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  background-image: 
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0, 240, 255, 0.12), transparent),
+    radial-gradient(circle 600px at 85% 30%, rgba(37, 99, 235, 0.08), transparent),
+    radial-gradient(circle 500px at 15% 70%, rgba(255, 107, 0, 0.06), transparent),
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 48px 48px, 48px 48px;
+  background-attachment: fixed;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-darkest);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(56, 189, 248, 0.25);
+  border-radius: 9999px;
+  border: 2px solid var(--bg-darkest);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cyan-primary);
+}
+
+/* Links & Typography Utility */
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Container Utilities */
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding-top: 6.5rem; /* Navbar height compensation */
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Glassmorphism Cards */
+.cyber-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--border-subtle);
+  border-radius: 18px;
+  padding: 1.75rem;
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--cyan-primary), transparent);
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.cyber-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-glow);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px -8px var(--cyan-glow);
+}
+
+.cyber-card:hover::before {
+  opacity: 1;
+}
+
+/* Glowing Neon Badge */
+.cyber-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-tech);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cyan-primary);
+  background: rgba(0, 240, 255, 0.08);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  padding: 0.4rem 0.9rem;
+  border-radius: 9999px;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.15);
+}
+
+.cyber-badge-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--cyan-primary);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--cyan-primary);
+  animation: pulse-glow 2s infinite ease-in-out;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.8); }
+}
+
+/* Primary Action Buttons */
+.cyber-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  padding: 0.85rem 1.75rem;
+  background: linear-gradient(135deg, #00f0ff 0%, #0070f3 100%);
+  color: #030712;
+  border-radius: 12px;
+  transition: all var(--transition-normal);
+  box-shadow: 0 4px 20px -2px var(--cyan-glow);
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px 2px var(--cyan-glow);
+  color: #000;
+}
+
+.cyber-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  padding: 0.85rem 1.75rem;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-primary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  transition: all var(--transition-normal);
+  backdrop-filter: blur(8px);
+}
+
+.cyber-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: var(--cyan-primary);
+  color: var(--cyan-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 240, 255, 0.15);
+}
+
+/* Gradient Headings */
+.gradient-text {
+  background: linear-gradient(135deg, #ffffff 30%, #38bdf8 70%, #00f0ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-amber {
+  background: linear-gradient(135deg, #ffffff 40%, #fbbf24 75%, #ff6b00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

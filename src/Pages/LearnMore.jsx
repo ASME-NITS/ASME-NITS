@@ -1,83 +1,117 @@
+import React from "react";
 import "../Components/styles/LearnMore.css";
 import globe from "../assets/globe.png";
 import student from "../assets/student.png";
 import technical from "../assets/technical.png";
+import { FaExternalLinkAlt, FaGlobe, FaUserGraduate, FaLayerGroup, FaCheckCircle } from "react-icons/fa";
+
+const sectionsData = [
+  {
+    id: "professional",
+    badge: "GLOBAL NETWORK",
+    icon: <FaGlobe />,
+    title: "PROFESSIONAL SECTIONS",
+    description: "ASME Professional Sections provide local and regional engagement for practicing mechanical engineers worldwide. Members connect through leadership, continuous professional development, awards, and technical symposiums.",
+    features: [
+      "Geographic Networking & Industry Summits",
+      "Continuing Education & Professional Engineering Certifications",
+      "Honors, Fellow Nominations & Outreach Programs"
+    ],
+    image: globe,
+    link: "https://sections.asme.org/professional-sections",
+    linkText: "Explore Professional Sections"
+  },
+  {
+    id: "student",
+    badge: "COLLEGIATE CHAPTERS",
+    icon: <FaUserGraduate />,
+    title: "STUDENT SECTIONS",
+    description: "ASME Student Sections link thousands of engineering undergraduates and researchers across global universities. Chapters elevate student learning through competitions, leadership roles, and direct mentorship from industry leaders.",
+    features: [
+      "Student Competitions & Global E-Fests",
+      "Collegiate Leadership & Committee Roles",
+      "Scholarships, Travel Grants & Student Design Challenges"
+    ],
+    image: student,
+    link: "https://sections.asme.org/student-sections",
+    linkText: "Explore Student Sections"
+  },
+  {
+    id: "technical",
+    badge: "SPECIALIZATION GROUPS",
+    icon: <FaLayerGroup />,
+    title: "TECHNICAL DIVISIONS",
+    description: "ASME Technical Divisions enable engineers to collaborate in specific specialized disciplines — from Robotics, Aerospace, and Bioengineering to Energy Conversion, Nanotechnology, and Advanced Manufacturing.",
+    features: [
+      "Access to Premier Technical Journals & Conference Proceedings",
+      "Specialized Research Committees & Working Groups",
+      "Peer Review, Standards Development & Innovation Summits"
+    ],
+    image: technical,
+    link: "https://www.asme.org/get-involved/groups-sections-and-technical-divisions/technical-divisions",
+    linkText: "Explore Technical Divisions"
+  }
+];
 
 const LearnMore = () => {
   return (
-    <main className="learnmore-page">
+    <div className="learnmore-wrapper">
       
-      {/* PROFESSIONAL */}
-      <section className="learn-section">
-        <div className="learn-text">
-          <h1>PROFESSIONAL SECTIONS</h1>
-          <p>
-            ASME Professional Sections provide local and geographic engagement.
-            Members connect through professional development programs,
-            networking opportunities, awards, recognitions, and outreach
-            activities.
-          </p>
-          <a
-            href="https://sections.asme.org/professional-sections?_gl=1*1aov6yl*_gcl_au*MTI1MjQ5ODM0Mi4xNzY4MTQ3MjY2*_ga*NDY3MzY4MjEzLjE3NjgxNDcyNjY.*_ga_3DH4W3W6HS*czE3NjgxNTU1OTUkbzIkZzAkdDE3NjgxNTU1OTUkajYwJGwwJGgxNTQ4NzUzNDk2"
-            target="_blank"
-            className="learn-link"
-          >
-            Learn More About Professional Sections →
-          </a>
+      {/* Intro Header */}
+      <section className="learnmore-intro">
+        <div className="cyber-badge">
+          <span className="cyber-badge-dot"></span>
+          GLOBAL ARCHITECTURE
         </div>
-
-        <div className="learn-image">
-          <img src={globe} alt="Professional Sections" />
-        </div>
+        <h1 className="learnmore-main-title">
+          SECTIONS & <span className="gradient-text">TECHNICAL DIVISIONS</span>
+        </h1>
+        <p className="learnmore-subtitle">
+          Discover how ASME structures its international engineering community into local professional chapters, vibrant student sections, and specialized technical divisions.
+        </p>
       </section>
 
-      {/* STUDENT */}
-      <section className="learn-section reverse">
-        <div className="learn-text">
-          <h1>STUDENT SECTIONS</h1>
-          <p>
-            ASME Student Sections connect students at universities worldwide.
-            They enhance learning through leadership, mentoring, volunteering,
-            and technical activities while building professional networks.
-          </p>
-          <a
-            href="https://sections.asme.org/student-sections?_gl=1*g20r7s*_gcl_au*MTI1MjQ5ODM0Mi4xNzY4MTQ3MjY2*_ga*NDY3MzY4MjEzLjE3NjgxNDcyNjY.*_ga_3DH4W3W6HS*czE3NjgxNTU1OTUkbzIkZzEkdDE3NjgxNTU2ODckajYwJGwwJGgxNTQ4NzUzNDk2"
-            target="_blank"
-            className="learn-link"
+      {/* Sections Cards */}
+      <section className="learnmore-sections-list">
+        {sectionsData.map((sec, idx) => (
+          <div 
+            key={sec.id} 
+            className={`cyber-card learnmore-card ${idx % 2 === 1 ? 'reverse-card' : ''}`}
           >
-            Learn More About Student Sections →
-          </a>
-        </div>
+            <div className="learnmore-media">
+              <img src={sec.image} alt={sec.title} className="learnmore-img" />
+            </div>
 
-        <div className="learn-image">
-          <img src={student} alt="Student Sections" />
-        </div>
+            <div className="learnmore-content">
+              <div className="cyber-badge">
+                {sec.icon} {sec.badge}
+              </div>
+              <h2 className="learnmore-title">{sec.title}</h2>
+              <p className="learnmore-desc">{sec.description}</p>
+
+              <div className="learnmore-features">
+                {sec.features.map((feat, i) => (
+                  <div key={i} className="feat-item">
+                    <FaCheckCircle className="feat-icon" />
+                    <span>{feat}</span>
+                  </div>
+                ))}
+              </div>
+
+              <a
+                href={sec.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cyber-btn-primary"
+              >
+                {sec.linkText} <FaExternalLinkAlt />
+              </a>
+            </div>
+          </div>
+        ))}
       </section>
 
-      {/* TECHNICAL */}
-      <section className="learn-section">
-        <div className="learn-text">
-          <h1>TECHNICAL DIVISIONS</h1>
-          <p>
-            ASME Technical Divisions allow members to collaborate based on
-            professional interests. Benefits include conferences, journals,
-            leadership roles, career growth, and research opportunities.
-          </p>
-          <a
-            href="https://www.asme.org/get-involved/groups-sections-and-technical-divisions/technical-divisions"
-            target="_blank"
-            className="learn-link"
-          >
-            Learn More About Technical Divisions →
-          </a>
-        </div>
-
-        <div className="learn-image">
-          <img src={technical} alt="Technical Divisions" />
-        </div>
-      </section>
-
-    </main>
+    </div>
   );
 };
 
