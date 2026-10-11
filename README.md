@@ -24,7 +24,7 @@
 
 This repository hosts the official web application for the **ASME Student Section at National Institute of Technology Silchar (NIT Silchar)**. 
 
-The platform is designed to promote innovation, multidisciplinary engineering, advanced robotics, aerospace prototyping, and technical competitions organized by ASME NITS. It features a futuristic cybernetic engineering theme with responsive dark-mode glassmorphism, interactive navigation, and automated CI/CD deployments.
+The platform is designed to promote innovation, multidisciplinary engineering, advanced robotics, aerospace prototyping, and technical competitions organized by ASME NITS.
 
 ---
 
@@ -33,7 +33,10 @@ The platform is designed to promote innovation, multidisciplinary engineering, a
 - **Production URL:** [https://asme-nits.github.io/ASME-NITS/](https://asme-nits.github.io/ASME-NITS/)
 - **Organization Profile:** [github.com/ASME-NITS](https://github.com/ASME-NITS)
 
+
 ---
+
+
 
 
 
@@ -91,15 +94,6 @@ ASME-NITS/
 
 
 
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 ---
 
