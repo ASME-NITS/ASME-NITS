@@ -35,33 +35,7 @@ The platform is designed to promote innovation, multidisciplinary engineering, a
 
 ---
 
-## ✨ Key Features & Pages
 
-* **Futuristic Engineering Design System**:
-  * Curated aerospace dark theme with ambient cyber-grid and neon glow effects.
-  * Frosted glassmorphism surfaces (`.cyber-card`) with dynamic hover lighting.
-  * Modern typography pairing: **Orbitron** (cyber tech headings), **Space Grotesk** (subheadings), and **Outfit / Inter** (clean readable body).
-* **🏠 Home & Hero Showcase**:
-  * High-impact hero section with glowing floating robotics illustration.
-  * Real-time Stats HUD bar highlighting members, competitions, and technical divisions.
-  * The Robotics Collection showcasing Autonomous Cobots, Mech-Activity, and Bionic Prototyping.
-* **🏆 Flagship Events & Competitions**:
-  * Dedicated event showcases for **AeroStrike** (Flight modeling & aerodynamics), **Bridge It** (Structural truss challenges), **Escape The Room** (Logic puzzles & circuits), and **Effecto Cascada** (Domino & marble maze challenges).
-  * Challenge metadata, team sizing, and interactive registration triggers.
-* **👥 Leadership & About Us**:
-  * Chapter mission, core values, and practical innovation pillars.
-  * Executive Board directory with avatar glow rings, operational tags, and social profiles.
-* **🌐 Sections & Technical Divisions**:
-  * Directory explaining ASME Professional Sections, Student Sections, and Specialized Technical Divisions with direct portal links.
-* **📬 Interactive Contact Hub**:
-  * Validated contact form using `react-hook-form` with submission feedback.
-  * Direct campus headquarters address, department email, and official social handles.
-* **⚡ Production-Ready Infrastructure**:
-  * Universal relative base path configuration (`base: './'`).
-  * `HashRouter` integration ensuring seamless direct links without 404 errors on static hosts.
-  * Automated GitHub Actions CI/CD pipeline deploying to GitHub Pages on every push.
-
----
 
 ## 🛠️ Tech Stack
 
@@ -115,58 +89,7 @@ ASME-NITS/
 
 ---
 
-## 💻 Getting Started Locally
 
-### Prerequisites
-Make sure you have [Node.js](https://nodejs.org/) (version 18 or higher) and [npm](https://www.npmjs.com/) installed on your machine.
-
-### Installation
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/ASME-NITS/ASME-NITS.git
-   cd ASME-NITS
-   ```
-
-2. **Install project dependencies:**
-   ```bash
-   npm install
-   ```
-
-3. **Start the local development server:**
-   ```bash
-   npm run dev
-   ```
-   Open [http://localhost:5173](http://localhost:5173) in your browser to view the application with Hot Module Replacement (HMR).
-
----
-
-## 📦 Build & Deployment
-
-### Creating a Production Build
-To create a minified and optimized production bundle:
-```bash
-npm run build
-```
-The compiled static assets will be output to the `./dist` directory.
-
-### Previewing the Production Build
-```bash
-npm run preview
-```
-
-### Deploying to GitHub Pages
-
-#### Option 1: Automated Deployment via GitHub Actions (Recommended)
-Any push to the `main` branch automatically triggers the workflow at `.github/workflows/deploy.yml`, which tests, builds, and publishes the project to GitHub Pages.
-
-#### Option 2: Manual Deployment Script
-You can also build and deploy directly to the `gh-pages` branch by running:
-```bash
-npm run deploy
-```
-
----
 
 ## 🤝 Contributing
 
